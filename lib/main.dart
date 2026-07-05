@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-import 'screens/login_screen.dart'; // Importamos la pantalla de login
+import 'package:firebase_core/firebase_core.dart';
+import 'screens/login_screen.dart';
 
-void main() {
-  runApp(const EcoPointApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await Firebase.initializeApp();
+    runApp(const EcoPointApp());
+  } catch (e) {
+    print("🔥 Error al iniciar Firebase: $e");
+  }
 }
 
 class EcoPointApp extends StatelessWidget {
@@ -12,10 +19,8 @@ class EcoPointApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'EcoPoint',
-      theme: ThemeData(
-        primarySwatch: Colors.green, // Color principal de la app
-      ),
-      home: const LoginScreen(), // Pantalla inicial
+      theme: ThemeData(primarySwatch: Colors.green),
+      home: const LoginScreen(),
     );
   }
 }
