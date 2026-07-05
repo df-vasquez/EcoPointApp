@@ -1,4 +1,4 @@
-# 🌿 EcoPoint App
+# EcoPoint App
 
 ¡Bienvenido a **EcoPoint**! Una aplicación móvil moderna desarrollada con **Flutter** orientada a la gestión y concientización ecológica (reciclaje, incentivos y geolocalización de puntos verdes).
 
@@ -45,6 +45,7 @@ Sigue estos pasos en orden para levantar el entorno de desarrollo desde cero:
     ```
 
 ---
+
 
 ## Ejecución del Proyecto
 
